@@ -32,7 +32,7 @@ public class CircularArrayQueue implements Queue {
 
     @Override
     public int size() {
-        return size;
+        return point % size;
     }
 
     @Override
@@ -49,6 +49,7 @@ public class CircularArrayQueue implements Queue {
 
     @Override
     public boolean enqueue(String obj) {
+        if(isFull()) return false;
         int actual_point = point % size;
         arr[actual_point] = obj;
         point++;
