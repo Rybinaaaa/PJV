@@ -7,7 +7,6 @@ public class Start {
 
     public static void main(String[] args) {
 
-         
         /* homework */
         Queue queue = new CircularArrayQueue(10);
 
